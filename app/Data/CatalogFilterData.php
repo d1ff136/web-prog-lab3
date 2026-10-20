@@ -17,7 +17,7 @@ final readonly class CatalogFilterData
     ) {
     }
 
-    /** Створює DTO з перевірених даних запиту ($request->validated()). */
+    /**створення DTO з перевірених даних запиту ($request->validated()). */
     public static function fromArray(array $data): self
     {
         $q = isset($data['q']) ? trim((string) $data['q']) : '';
@@ -32,7 +32,7 @@ final readonly class CatalogFilterData
         );
     }
 
-    /** Параметри для посилань пагінації (лише перевірені фільтри, без page). */
+    /**параметри для посилань пагінації (лише перевірені фільтри, без page). */
     public function toQuery(): array
     {
         return array_filter([
